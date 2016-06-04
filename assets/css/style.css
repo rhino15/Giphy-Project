@@ -1,0 +1,38 @@
+@font-face {
+	font-family: sports;
+	src: url("../images/FNL.ttf") format("truetype");
+}
+
+body {
+	font-family: "sports";
+	background: url(../../assets/images/fieldbg.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+img {
+	width: 300px;
+	height: 245px;
+	margin-right: 1%;
+	margin-bottom: 2%;
+}
+
+.displayGifs {
+	margin: 15px 35px;
+}
+
+.ratings {
+	width: 300px;
+}
+
+.gifs {
+	margin-right: 1%;
+	border: 2px solid yellow;
+}
+
+p {
+	font-weight: bold;
+	color: white;
+}

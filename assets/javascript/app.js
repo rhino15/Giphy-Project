@@ -19,7 +19,7 @@ $(document).ready(function() {
 	}
 
 	$('#addGif').on('click', function() {
-
+		$('#gif-input').empty();
 		var gif = $('#gif-input').val().trim();
 		gifArray.push(gif);
 
@@ -35,16 +35,27 @@ $(document).ready(function() {
 
 		$.ajax({url: queryURL, method: 'GET'}).done(function(response) {
 			for (var i = 0; i < 10; i++) {
+				var gifDiv = $('<div>');
+				gifDiv.addClass("col-md-4");
+				var displayRatings = $('<p class=buttonText>').text("Rating: " + response.data[i].rating);
+				gifDiv.append(displayRatings);
+				
 				var gifImage = $('<img>');
 				gifImage.attr('src', response.data[i].images.original_still.url);
 				gifImage.attr('data-still', response.data[i].images.original_still.url);
 				gifImage.attr('data-animate', response.data[i].images.original.url);
 				gifImage.attr('data-state', "still");
 				gifImage.addClass('actualGif');
-				$('#displayGifs').append(gifImage);
+				gifDiv.append(gifImage);
+
+				$('#displayGifs').append(gifDiv);
 			}
 			startAndStopGifs();
 		});
+
+	}
+
+	function displayRatings() {
 
 	}
 
@@ -61,7 +72,6 @@ $(document).ready(function() {
 			}
 		});
 	}
-
 
 	$(document).on('click', '.gifs', displayGifs);
 
