@@ -36,7 +36,7 @@ $(document).ready(function() {
 		$.ajax({url: queryURL, method: 'GET'}).done(function(response) {
 			for (var i = 0; i < 10; i++) {
 				var gifDiv = $('<div>');
-				gifDiv.addClass("col-md-4");
+				gifDiv.addClass("col-md-4 sportsGif");
 				var displayRatings = $('<p class=buttonText>').text("Rating: " + response.data[i].rating);
 				gifDiv.append(displayRatings);
 				

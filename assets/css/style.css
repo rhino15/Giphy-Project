@@ -3,6 +3,11 @@
 	src: url("../images/FNL.ttf") format("truetype");
 }
 
+@font-face {
+	font-family: diffSportsFont;
+	src: url("../images/Freshman.ttf") format("truetype");
+}
+
 body {
 	font-family: "sports";
 	background: url(../../assets/images/fieldbg.jpg) no-repeat center center fixed;
@@ -10,6 +15,7 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+
 }
 
 img {
@@ -30,9 +36,35 @@ img {
 .gifs {
 	margin-right: 1%;
 	border: 2px solid yellow;
+	font-family: diffSportsFont;
+}
+
+.actualGif {
+	border: 2px solid yellow;
+	text-shadow: 6px 6px 12px black;
 }
 
 p {
 	font-weight: bold;
+	color: black;
+}
+
+h1 {
 	color: white;
+	text-align: center;
+	font-size: 120px;
+}
+
+#gif-form input {
+	font-family: diffSportsFont;
+}
+
+#addGif {
+	margin-top: 2px;
+	margin-left: 2px;
+	font-family: diffSportsFont;
+}
+
+#displayGifButtons {
+	margin-left: 5px;
 }
